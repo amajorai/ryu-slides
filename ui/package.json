@@ -1,0 +1,31 @@
+{
+  "name": "@ryu/slides-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "The Ryu Slides Companion: a local-first visual layer and carousel editor.",
+  "scripts": {
+    "build": "vite build",
+    "check-types": "tsc --noEmit",
+    "dev": "vite",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "@ryu/blocks": "workspace:*",
+    "@ryu/ui": "workspace:*",
+    "@ryu/app-host": "workspace:*",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@ryu/config": "workspace:*",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.2.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "vite": "^7.3.1",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}

@@ -1,0 +1,351 @@
+{
+  "version": 1,
+  "package": "slides",
+  "scope": "partial",
+  "expectedRows": 26,
+  "selector": {
+    "spec": "e2e/specs/slides-owned-coverage.spec.mjs",
+    "config": "playwright.config.ts"
+  },
+  "evidenceBoundary": "The compiled Slides bundle runs in the actual sandboxed ExtensionHost. HostServices storage, model and media endpoints are deterministic local fixtures; image/video files are generated local fixtures and Playwright supplies them through real browser file choosers. Tests assert rendered layer/canvas state, persisted project state across host remount, JSON import/export bytes, video seek/capture and the generated-media result. No live Core, external model provider or real camera/device is exercised; generated image, video and carousel content remains fixture output.",
+  "assertions": [
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "328",
+        "component": "LayerPanel",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "Add Shape creates a selectable shape whose fill, type and geometry are persisted.",
+      "assertionMarker": "Add Shape inserts a new editable shape layer that accepts color, geometry and shape edits."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "336",
+        "component": "LayerPanel",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "Add Image creates a renderable image layer with persisted fit and bounds.",
+      "assertionMarker": "Add Image inserts a real previewable image layer with default frame bounds."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "427",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "canvas selection, drag, resize, and rotate persist the resulting geometry",
+      "assertionName": "The X control initializes the layer position and pointer movement persists its new coordinate.",
+      "assertionMarker": "The X and Y inspector fields set the saved canvas position before pointer dragging changes it."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "432",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "canvas selection, drag, resize, and rotate persist the resulting geometry",
+      "assertionName": "The Y control initializes the layer position and pointer movement persists its new coordinate.",
+      "assertionMarker": "The X and Y inspector fields set the saved canvas position before pointer dragging changes it."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "437",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The W control persists the selected layer width used by the renderer.",
+      "assertionMarker": "Width, height, angle and opacity numeric fields are applied to the selected layer and persist in the project model."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "442",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The H control persists the selected layer height used by the renderer.",
+      "assertionMarker": "Width, height, angle and opacity numeric fields are applied to the selected layer and persist in the project model."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "449",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The Angle control persists rotation and the transformed canvas bounds.",
+      "assertionMarker": "Width, height, angle and opacity numeric fields are applied to the selected layer and persist in the project model."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "456",
+        "component": "LayerPanel",
+        "tag": "NumberField",
+        "events": "onChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The Opacity control persists the layer transparency setting.",
+      "assertionMarker": "Width, height, angle and opacity numeric fields are applied to the selected layer and persist in the project model."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "521",
+        "component": "LayerPanel",
+        "tag": "ColorPickerPopover",
+        "events": "onValueChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The Shape fill color picker commits the selected hex color to project state.",
+      "assertionMarker": "The Fill color picker commits its hex value to the selected shape layer."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "554",
+        "component": "LayerPanel",
+        "tag": "NativeSelect",
+        "events": "onChange"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "Image Fit contain is rendered and still selected after host remount.",
+      "assertionMarker": "The image Fit selector updates the rendered object-fit behavior and persisted layer state."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "808",
+        "component": "Editor",
+        "tag": "CarouselFrame",
+        "events": "onSelect"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "Selecting a layer through the editor CarouselFrame reveals its Inspector.",
+      "assertionMarker": "The editor CarouselFrame selects the matching canvas layer and exposes its live inspector."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/App.tsx",
+        "line": "1134",
+        "component": "App",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "import reports malformed JSON, recovers on retry, and exports the imported deck",
+      "assertionName": "Dismiss message clears the malformed-import warning and allows the valid import retry.",
+      "assertionMarker": "Dismiss message clears only the malformed-import notification so a corrected deck can be selected."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/CarouselFrame.tsx",
+        "line": "33",
+        "component": "CarouselFrame",
+        "tag": "LayerCanvas",
+        "events": "onSelect"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The editor CarouselFrame forwards selected layer IDs from LayerCanvas.",
+      "assertionMarker": "The LayerCanvas layer click and pointer interaction select that layer and reveal its inspector and resize handle."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/CarouselPreview.tsx",
+        "line": "72",
+        "component": "CarouselPreview",
+        "tag": "CarouselFrame",
+        "events": "onSelect"
+      },
+      "testTitle": "import reports malformed JSON, recovers on retry, and exports the imported deck",
+      "assertionName": "Reader frames navigate by frame controls while read-only canvas clicks leave persisted projects unchanged.",
+      "assertionMarker": "Reader navigation selects the requested frame; clicking a read-only CarouselFrame does not change its saved project."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/Gallery.tsx",
+        "line": "49",
+        "component": "ProjectCard",
+        "tag": "button",
+        "events": ""
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The project card opens its saved editor when the user activates its thumbnail.",
+      "assertionMarker": "The gallery thumbnail's read-only CarouselFrame lets the outer ProjectCard open its persisted editor."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/Gallery.tsx",
+        "line": "52",
+        "component": "ProjectCard",
+        "tag": "CarouselFrame",
+        "events": "onSelect"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "The read-only gallery CarouselFrame delegates project opening to its enclosing card.",
+      "assertionMarker": "The gallery thumbnail's read-only CarouselFrame lets the outer ProjectCard open its persisted editor."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/Gallery.tsx",
+        "line": "173",
+        "component": "Gallery",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "import reports malformed JSON, recovers on retry, and exports the imported deck",
+      "assertionName": "Import JSON reads actual browser-selected JSON and persists the imported editable deck.",
+      "assertionMarker": "Import JSON opens the browser file chooser and reports malformed content instead of mutating the gallery."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/LayerCanvas.tsx",
+        "line": "210",
+        "component": "LayerCanvas",
+        "tag": "div",
+        "events": "onPointerDown"
+      },
+      "testTitle": "shape and image inspector edits select, render, persist, and reopen",
+      "assertionName": "Pointer-down on canvas whitespace clears the selected layer and removes its resize handle.",
+      "assertionMarker": "Clicking the blank canvas deselects the active layer and removes its transform handles."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/LayerCanvas.tsx",
+        "line": "237",
+        "component": "LayerCanvas",
+        "tag": "div",
+        "events": "onClick,onPointerDown"
+      },
+      "testTitle": "canvas selection, drag, resize, and rotate persist the resulting geometry",
+      "assertionName": "Pointer interaction on a selected layer moves it and persists the resulting position.",
+      "assertionMarker": "The LayerCanvas pointer-down/move/up sequence persists the moved layer geometry."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/LayerCanvas.tsx",
+        "line": "276",
+        "component": "LayerCanvas",
+        "tag": "Button",
+        "events": "onPointerDown"
+      },
+      "testTitle": "canvas selection, drag, resize, and rotate persist the resulting geometry",
+      "assertionName": "Dragging the Resize handle updates persisted width and height.",
+      "assertionMarker": "The resize handle's pointer interaction updates the layer's stored width and height."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/LayerCanvas.tsx",
+        "line": "284",
+        "component": "LayerCanvas",
+        "tag": "Button",
+        "events": "onPointerDown"
+      },
+      "testTitle": "canvas selection, drag, resize, and rotate persist the resulting geometry",
+      "assertionName": "Dragging the Rotate handle updates persisted layer rotation.",
+      "assertionMarker": "The rotation handle persists the new angle after a user drag."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/MediaTools.tsx",
+        "line": "238",
+        "component": "MediaTools",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "image and video upload, scrub, capture, and provider retry yield usable media",
+      "assertionName": "Upload inserts a selected local PNG as a real image layer and persists its source bytes.",
+      "assertionMarker": "Upload routes the local PNG through the browser chooser and inserts its decodable bytes as an image layer."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/MediaTools.tsx",
+        "line": "273",
+        "component": "MediaTools",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "image and video upload, scrub, capture, and provider retry yield usable media",
+      "assertionName": "Choose video reads a local WebM through the browser chooser and decodes it for scrubbing.",
+      "assertionMarker": "Choose video selects a local WebM fixture and renders a real decoded video preview."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/MediaTools.tsx",
+        "line": "295",
+        "component": "MediaTools",
+        "tag": "Slider",
+        "events": "onValueChange"
+      },
+      "testTitle": "image and video upload, scrub, capture, and provider retry yield usable media",
+      "assertionName": "Changing Video position moves the preview to the selected timestamp before capture.",
+      "assertionMarker": "Video position scrubbing moves the HTML video currentTime before the selected frame is captured."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/MediaTools.tsx",
+        "line": "310",
+        "component": "MediaTools",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "image and video upload, scrub, capture, and provider retry yield usable media",
+      "assertionName": "Capture current frame creates an image layer from the selected video time.",
+      "assertionMarker": "Capture current frame adds the selected decoded video frame as a usable PNG image layer."
+    },
+    {
+      "row": {
+        "package": "slides",
+        "source_file": "apps-store/slides/ui/src/components/MediaTools.tsx",
+        "line": "318",
+        "component": "MediaTools",
+        "tag": "Button",
+        "events": "onClick"
+      },
+      "testTitle": "image and video upload, scrub, capture, and provider retry yield usable media",
+      "assertionName": "Generate a Ryu video clip retries its exact prompt and captures returned media after recovery.",
+      "assertionMarker": "Generate a Ryu video clip retries the exact prompt after a local provider error and renders the returned video."
+    }
+  ]
+}

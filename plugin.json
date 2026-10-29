@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ryu.slides",
+  "version": "0.2.1",
+  "description": "Create, edit, organize, preview, import, and export carousel frames locally with Ryu's media tools.",
+  "author": {
+    "name": "Ryu",
+    "url": "https://ryuhq.com"
+  },
+  "homepage": "https://github.com/amajorai/ryu-slides",
+  "repository": "https://github.com/amajorai/ryu-slides",
+  "keywords": ["slides", "thumbnails", "images", "video", "editor", "carousel"],
+  "extensions": {
+    "com.ryuhq.ryu": {
+      "id": "@ryu/slides",
+      "displayName": "Slides"
+    }
+  }
+}
